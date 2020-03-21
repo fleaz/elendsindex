@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Ranking</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>description</th>
+            <th>Value</th>
+            <th>Original Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for t in things %}
+        <tr>
+            <td>{{ t.description}} </td>
+            <td>{{ t.value}} </td>
+            <td>{{ t.original_value}} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

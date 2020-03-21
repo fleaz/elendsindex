@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block style %}
+.card {
+  background-color: lightgray;
+  padding: 2rem;
+  text-align: center;
+  float: left;
+  margin: 0.5rem;
+  width: 30%;
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+a:visited {
+  color: black;
+}
+
+
+h1 {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+{% endblock %}
+
+{% block content %}
+    <h1>Was ist schlimmer?</h1>
+    <div class="container">
+        <a href="/upvote/{{left.id}}"><div class="card">{{ left.description }}</div></a>
+        <a href="/upvote/{{right.id}}"><div class="card">{{ right.description }}</div></a>
+    </div>
+{% endblock %}
