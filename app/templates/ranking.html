@@ -1,23 +1,33 @@
 {% extends "base.html" %}
 
+{% block style %}
+.centered {
+text-align: center;
+}
+{% endblock %}
+
 {% block content %}
-    <h1>Ranking</h1>
-    <table>
-        <thead>
+<h1>Ranking</h1>
+<p>
+    Es wurden bereits <b>{{ count }}</b> von 200 Karten eingpflegt!
+</p>
+<table>
+    <thead>
         <tr>
-            <th>description</th>
-            <th>Value</th>
-            <th>Original Value</th>
+            <th>Beschreibung</th>
+            <th class="centered">Community Rating</th>
+            <th class="centered">Original Rating</th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         {% for t in things %}
         <tr>
             <td>{{ t.description}} </td>
-            <td>{{ t.value}} </td>
-            <td>{{ t.original_value}} </td>
+            <td class="centered">{{ t.value}} </td>
+            <td class="centered" style="background-color: {{ colorgradient(t.original_value) }}">{{ t.original_value}}
+            </td>
         </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </tbody>
+</table>
 {% endblock %}

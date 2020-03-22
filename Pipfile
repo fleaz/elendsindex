@@ -10,6 +10,8 @@ flask = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-wtf = "*"
+color = "*"
+colour = "*"
 
 [requires]
 python_version = "3.8"

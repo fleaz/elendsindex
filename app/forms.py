@@ -4,6 +4,6 @@ from wtforms.validators import DataRequired
 
 
 class NewForm(FlaskForm):
-    description = StringField("Decription", validators=[DataRequired()])
-    value = StringField("Original Value", validators=[DataRequired()])
-    submit = SubmitField("Submit")
+    description = StringField("Beschreibung", validators=[DataRequired()])
+    value = StringField("Original Wert", validators=[DataRequired()])
+    submit = SubmitField("Speichern")
